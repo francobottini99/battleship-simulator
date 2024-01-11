@@ -2,6 +2,10 @@
 
 Este repositorio contiene un programa en C++ que simula el juego de la "Batalla Naval". El juego consiste en un tablero de 10x10 casilleros donde se posicionan 10 barcos de uno a cuatro casilleros, ya sea en forma horizontal o vertical. El objetivo es hundir todos los barcos a través de lanzamientos de "bombas" en posiciones específicas.
 
+### Autores:
+- **Bottini, Franco Nicolas**
+- **Robledo, Valentin**
+
 ## Estrategias de Juego
 
 ### Estrategias de Encolamiento
