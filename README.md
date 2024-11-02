@@ -1,26 +1,26 @@
-# Batalla Naval Simulator
+# Battleship Simulator
 
-Este repositorio contiene un programa en C++ que simula el juego de la "Batalla Naval". El juego consiste en un tablero de 10x10 casilleros donde se posicionan 10 barcos de uno a cuatro casilleros, ya sea en forma horizontal o vertical. El objetivo es hundir todos los barcos a través de lanzamientos de "bombas" en posiciones específicas.
+This repository contains a C++ program that simulates the game "Battleship." The game consists of a 10x10 grid where 10 ships of varying sizes (one to four squares) are placed horizontally or vertically. The objective is to sink all ships by launching "bombs" at specific grid coordinates.
 
-### Autores:
-- **Bottini, Franco Nicolas**
-- **Robledo, Valentin**
+### Authors:
+- **Franco Nicolas Bottini**
+- **Valentin Robledo**
 
-## Estrategias de Juego
+## Game Strategies
 
-### Estrategias de Encolamiento
-El programa simula tres estrategias de encolamiento de las pilas de posiciones a las cuales disparar:
+### Queueing Strategies
+The program simulates three queueing strategies for targeting positions to shoot at:
 
-1. **Encolamiento Secuencial por Filas (SPF):** Encola las posiciones siguiendo un orden contiguo con respecto a las filas.
-2. **Encolamiento Secuencial por Columnas (SPC):** Encola las posiciones siguiendo un orden contiguo con respecto a las columnas.
-3. **Encolamiento Aleatorio (A):** Encola las posiciones siguiendo un orden completamente aleatorio.
+1. **Sequential Row Queueing (SRQ):** Queues positions sequentially by rows.
+2. **Sequential Column Queueing (SCQ):** Queues positions sequentially by columns.
+3. **Random Queueing (RQ):** Queues positions in a completely random order.
 
-### Algoritmos de Disparo
-El programa también simula tres algoritmos de disparo:
+### Shooting Algorithms
+The program also simulates three shooting algorithms:
 
-1. **Sin Memoria (SM):** El algoritmo de disparo no tiene "memoria" de los lugares en los cuales ya disparó, permitiendo disparar dos o más veces en el mismo casillero.
-2. **Con Memoria (CM):** El algoritmo de disparo tiene "memoria" de los lugares en los cuales ya disparó, evitando disparar más de una vez en el mismo casillero.
-3. **Completo (C):** Además de tener "memoria", el algoritmo de disparo no dispara en los lugares adyacentes a un barco, cumpliendo con las reglas del juego.
+1. **No Memory (NM):** The shooting algorithm has no "memory" of previously targeted positions, allowing multiple shots on the same square.
+2. **With Memory (WM):** The shooting algorithm remembers previously targeted positions, avoiding repeated shots on the same square.
+3. **Complete (C):** In addition to remembering positions, this shooting algorithm avoids targeting squares adjacent to a ship, adhering to game rules.
 
-## Resultados y Conclusiones
-Se realizaron 10,000 simulaciones para cada combinación de estrategia de encolamiento y algoritmo de disparo. Los resultados se presentan en gráficos dentro del `informe.pdf`. Como conclusión, se observa que el encolamiento por filas y por columnas tiene un rendimiento similar. Además, el algoritmo de disparo completo es el más eficiente independientemente del método de encolamiento utilizado. La combinación más rentable es el encolamiento secuencial completo (por filas o por columnas).
+## Results and Conclusions
+A total of 10,000 simulations were conducted for each combination of queueing strategy and shooting algorithm. The results are presented graphically in the `informe.pdf` file. In conclusion, row and column queueing strategies show similar performance. Additionally, the complete shooting algorithm proves to be the most efficient, regardless of the queueing strategy used. The most effective combination is the complete sequential queueing strategy (either by rows or columns).
